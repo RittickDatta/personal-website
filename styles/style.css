@@ -156,7 +156,9 @@ nav {
     display: none;
 }
 
-
+.hamburger-menu:hover {
+    cursor: pointer;
+}
 
 .hamburger-line {
     width: 35px;
@@ -192,7 +194,7 @@ main {
 
     section#top{
         background-color: #5483B3;
-        height: 65vh
+        height: 70vh
     };
 
     .top-fold-text {
@@ -292,6 +294,30 @@ aside {
 }
 .pitch-content {
 
+}
+
+.top-fold-content {
+    display: grid;
+    grid-template-columns: 80% 1fr;
+}
+
+.top-fold-content-right {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.top-action-btn {
+    width: 200px;
+    margin: 1rem;
+    height: 50px;
+    display: grid;
+    place-items: center;
+}
+
+.top-action-btn:last-child {
+    color: var(--dark-color);
+    background-color: var(--background-color);
 }
 
 /* SKILLS */
@@ -694,6 +720,68 @@ margin-top: 3rem;
 /* CONTACT END */
 
 
+/* MOBILE NAV */
+
+
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -45%;
+    height: 100%;
+    width: 45%;
+    transition: 0.3s ease-in-out;
+}
+
+.mobile-nav_items {
+    display: grid;
+    place-items: normal;
+    grid-template-columns: 1fr;
+    height: 90%;
+    background-color: var(--dark-color);
+    padding: 2rem;
+}
+
+.mobile-nav_item > a{
+    color: var(--light-color);
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+}
+
+.mobile-nav_item > a:active,
+.mobile-nav_item > a:hover {
+    color: var(--background-color);
+}
+
+.close {
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+    z-index: 2;
+}
+
+.close-line {
+    background-color: var(--background-color);
+    width: 57px;
+    height: 1px;
+    z-index: 2;
+    border-radius: 10px;
+}
+
+.close-line:first-of-type {
+    transform: rotate(40deg);
+}
+
+.close-line:last-of-type {
+    transform: rotate(-40deg);
+}
+
+.showMobileNav {
+    right: 0;
+}
+
+/* MOBILE NAV END */
+
 
 .hide {
     display: none;
@@ -719,7 +807,7 @@ margin-top: 3rem;
     main .top-fold-text {
         font-size: var(--heading-tablet);
         font-weight: bold;
-        width: 50%;
+        width: 100%;
         color: var(--background-color);
     }
 
@@ -730,6 +818,16 @@ margin-top: 3rem;
 
     .footer-nav {
         visibility: hidden;
+    }
+
+    /* TOP ACTIONS */
+
+    .top-fold-content {
+        grid-template-columns: 1fr;
+    }
+
+    .top-fold-text {
+        width: 100%;
     }
 
     /* PITCH */

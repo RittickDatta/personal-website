@@ -1,6 +1,10 @@
 const button = document.getElementById("showSummary");
 const aside = document.getElementById("summaryCard");
 
+const burgerIcon = document.querySelector(".hamburger-menu");
+const closeBtn = document.querySelector(".close");
+const mobileNav = document.querySelector(".mobile-nav");
+
 const skillCards = document.querySelectorAll(".skill-card");
 const years = document.querySelectorAll(".skill-experience");
 const recentlyUsed = document.querySelectorAll(".skill-recently-used");
@@ -39,3 +43,11 @@ for (let i = 0; i < navItems.length; i++) {
     tab.classList.add("showDetail");
   });
 }
+
+burgerIcon.addEventListener("click", () => {
+  mobileNav.classList.add("showMobileNav");
+});
+
+closeBtn.addEventListener("click", () => {
+  mobileNav.classList.remove("showMobileNav");
+});
