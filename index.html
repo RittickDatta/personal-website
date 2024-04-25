@@ -9,7 +9,12 @@
   <body>
     <header>
       <nav class="container" id="top-nav">
-        <span class="logo-text"><span class="logo-text-primary">Rittick Datta</span> <span class="logo-text-secondary">Senior Frontend Developer</span></span>
+        <span class="logo-text"
+          ><span class="logo-text-primary">Rittick Datta</span>
+          <span class="logo-text-secondary"
+            >Senior Frontend Developer</span
+          ></span
+        >
         <ul class="header-nav">
           <li><a href="#top-nav">Home</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -476,6 +481,30 @@
       </aside>
       <div class="summary-overlay"></div>
       <button id="showSummary" class="showSummary">Summary</button>
+      <button id="whatAmIWorkingOnBtn" class="showWhatAmIBuilding">
+        Latest Personal Project
+      </button>
+      <div class="latest-project-wrapper">
+        <div class="latest-project-overlay"></div>
+        <div class="latest-project-container">
+          <div class="latest-project-content">
+            <h2 class="latest-project-title">Task Center</h2>
+            <p class="latest-project-description">
+              I am building a React and TypeScript app to add task, edit task,
+              delete task, categortize based on Eisenhower Matrix, and view
+              analytics on tasks as time progresses.
+            </p>
+            <span class="status">In Progress</span>
+            <a
+              href="https://github.com/RittickDatta/task-manager/tree/master/src"
+              target="_blank"
+              class="contact-action view-repo"
+              >View Repo</a
+            >
+            <button class="contact-action close-btn">Close</button>
+          </div>
+        </div>
+      </div>
 
       <div class="mobile-nav">
         <a class="close">
