@@ -1,5 +1,6 @@
 const button = document.getElementById("showSummary");
 const aside = document.getElementById("summaryCard");
+const overlay = document.querySelector(".summary-overlay");
 
 const burgerIcon = document.querySelector(".hamburger-menu");
 const closeBtn = document.querySelector(".close");
@@ -11,6 +12,16 @@ const recentlyUsed = document.querySelectorAll(".skill-recently-used");
 
 button.addEventListener("click", () => {
   aside.classList.toggle("showHideAside");
+  if (aside.classList.contains("showHideAside")) {
+    overlay.classList.add("summary-overlay-show");
+  } else {
+    overlay.classList.remove("summary-overlay-show");
+  }
+});
+
+overlay.addEventListener("click", () => {
+  aside.classList.toggle("showHideAside");
+  overlay.classList.remove("summary-overlay-show");
 });
 
 function toggleHamburgerMenu() {
@@ -44,10 +55,12 @@ for (let i = 0; i < navItems.length; i++) {
   });
 }
 
+function hideMobileNav() {
+  mobileNav.classList.remove("showMobileNav");
+}
+
 burgerIcon.addEventListener("click", () => {
   mobileNav.classList.add("showMobileNav");
 });
 
-closeBtn.addEventListener("click", () => {
-  mobileNav.classList.remove("showMobileNav");
-});
+closeBtn.addEventListener("click", hideMobileNav);
