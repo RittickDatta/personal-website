@@ -859,6 +859,12 @@ margin-top: 3rem;
         font-weight: bold;
         width: 100%;
         color: var(--background-color);
+        margin-top: 4rem;
+    }
+
+    main .subtitle{
+        font-size: var(--title);
+        margin-bottom: 3rem;
     }
 
     aside {
