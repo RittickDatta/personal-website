@@ -147,13 +147,13 @@ a {
   position: fixed;
   bottom: -77%;
   width: 50%;
-  height: 65%;
+  height: 74%;
   border: 2px solid var(--dark-color);
   z-index: 3;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom: none;
-  padding: 3rem;
+  padding: 1.5rem 3rem;
   background-color: var(--background-color);
   transition: bottom 0.5s ease-out;
   box-shadow: 10px 10px 3px;
